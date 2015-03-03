@@ -1,0 +1,55 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+  height: 100%;
+  #font-family: cursive;
+}
+section#first {
+  //background: url("background/8-march.jpg") center center no-repeat;
+  background: url("background/flower.jpg") center center no-repeat;
+  background-size: cover;
+  //color: #ffffff;
+  text-align: center;
+  padding-top: 35%;
+  height: 100%;
+
+  .caption {
+    //background-color: rgba(245, 245, 245, 0.4);
+    //color: #444444;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0px;
+    line-height: 41px;
+
+    .happy {
+      //color: #ccc;
+      font-size: 34px;
+      text-transform: none;
+      font-weight: normal;
+    }
+    .day {
+      font-size: 48px;
+      color: pink;
+    }
+    .march8 {
+      //color: #999;
+      //text-align: right;
+      font-size: 40px;
+      //padding-left: 170px;
+    }
+  }
+}
+section#think {
+  background: #f2f2f2;
+  padding: 20px 0;
+
+  p {
+    color: #8c989e;
+    font-size: 1.4em;
+  }
+}
+.glyphicon {
+  color: pink;
+}
