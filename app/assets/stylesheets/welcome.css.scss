@@ -1,9 +1,115 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$small: 320px;
+$medium: 1000px;
+$large: 1200px;
+$wide: 1400px;
+
+$mediumH: 600px;
+$largeH: 800px;
+$wideH: 1200px;
+
+@mixin respond-to($media) {
+  @if $media == phone {
+    @media only screen and (max-width: $small) { @content; }
+  }
+  @else if $media == pad {
+    @media only screen and (min-width: $small + 1) and (max-width: $medium - 1) { @content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $medium + 1) and (max-width: $large - 1) { @content; }
+  }
+  @else if $media == mediumH {
+    @media only screen and (max-height: $largeH - 50) { @content; }
+  }
+  @else if $media == large-800 {
+    @media only screen and (min-width: $large + 1) and (max-width: $wide - 1) and (max-height: $largeH) { @content; }
+  }
+  @else if $media == large-1200 {
+    @media only screen and (min-width: $large + 1) and (max-width: $wide - 1) and (min-height: $largeH + 1) and (max-height: $wideH) { @content; }
+  }
+  @else if $media == wide {
+    @media only screen and (min-width: $wide) { @content; }
+  }
+}
+
 html, body {
   height: 100%;
   #font-family: cursive;
+}
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.padding-0 {
+  padding: 0;
+}
+.white {
+  color: #fff;
+}
+.pink {
+  color: pink !important;
+}
+.bg-pink {
+  background-color: pink !important;
+  padding: 3px;
+}
+.bg-white {
+  background-color: white !important;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.center {
+  text-align: center;
+}
+.font-inherit {
+  font-size: inherit;
+}
+.message {
+  color: #fff;
+  font-size: 46px;
+}
+.round {
+  height: 55px;
+  width: 55px;
+  //margin: 3px;
+  border-radius: 100%;
+  line-height: 55px;
+  text-align:center;
+  //background: #ffffff;
+  color: #fff;
+  border: 2px solid #ffffff;
+  //box-shadow: inset 0 0 0 5px #f2f2f2;
+  //-webkit-box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  //float: left;
+  //margin-right: 25px;
+}
+.round-wrap {
+  //font-size: 48px;
+  height: 110px;
+  width: 110px;
+  margin: 3px;
+  border-radius: 100%;
+  line-height: 110px;
+  text-align:center;
+  background: #ffffff;
+  //color: #c52d2f;
+  border: 3px solid #ffffff;
+  box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-box-shadow: inset 0 0 0 5px #f2f2f2;
+  -webkit-transition: 500ms;
+  -moz-transition: 500ms;
+  -o-transition: 500ms;
+  transition: 500ms;
+  //float: left;
+  margin-right: 25px;
 }
 section#first {
   //background: url("background/8-march.jpg") center center no-repeat;
@@ -13,6 +119,8 @@ section#first {
   text-align: center;
   padding-top: 35%;
   height: 100%;
+
+  @include respond-to(mediumH) { padding-top: 130px !important; }
 
   .caption {
     //background-color: rgba(245, 245, 245, 0.4);
@@ -41,15 +149,96 @@ section#first {
     }
   }
 }
-section#think {
+section#think, section#share, section#footer {
   background: #f2f2f2;
   padding: 20px 0;
+  height: auto !important;
 
   p {
     color: #8c989e;
     font-size: 1.4em;
   }
+
+  .glyphicon {
+    color: pink;
+  }
 }
-.glyphicon {
-  color: pink;
+section#love {
+  background: url("background/heart.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 100%;
+
+  .message {
+    padding-top: 7%;
+  }
+
+  .glyphicon {
+    top: 7px;
+  }
+}
+section#tender {
+  background: url("background/tender.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 100%;
+
+  .message {
+    padding-top: 13%;
+  }
+
+}
+section#happy {
+  background: url("background/happy.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 100%;
+
+  .message {
+    padding-top: 20%;
+  }
+}
+section#travel {
+  background: url("background/travel.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 100%;
+
+  .message {
+    @include respond-to(phone) { padding-top: 50%;}
+    @include respond-to(pad) { padding-top: 50%; }
+    @include respond-to(medium) { padding-top: 62%; }
+    @include respond-to(large-800) { padding-top: 50%; }
+    @include respond-to(large-1200) { padding-top: 62%; }
+    @include respond-to(wide) { padding-top: 23%; padding-left: 64%; }
+
+    @include respond-to(mediumH) { padding-top: 10% !important; }
+  }
+}
+section#exite {
+  background: url("background/exite.jpg") center center no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 100%;
+
+  .message {
+    @include respond-to(phone) { padding-top: 50%;}
+    @include respond-to(pad) { padding-top: 50%; }
+    @include respond-to(medium) { padding-top: 30%; }
+    @include respond-to(large-800) { padding-top: 30%; }
+    @include respond-to(large-1200) { padding-top: 62%; }
+    @include respond-to(wide) { padding-top: 23%; }
+
+    @include respond-to(mediumH) { padding-top: 130px !important; }
+  }
+}
+section#gallery {
+
+}
+section#footer {
+  border-top: 1px solid #ccc;
+  
+  p {
+    font-size: 1em
+  }
 }

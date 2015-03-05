@@ -14,7 +14,7 @@ gem 'annotate', '~> 2.6.5'
 gem 'bootstrap-sass'
 gem 'rails-assets-bootswatch-scss'
 gem 'sass-rails', '~> 4.0.3'
-gem 'font-awesome-sass', '~> 4.2.0'
+gem 'font-awesome-sass'
 gem 'autoprefixer-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -50,6 +50,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'meta-tags'
 
+# Browser check
+gem 'useragent'
+
 # Slim templates generator
 gem 'slim-rails'
 
@@ -61,6 +64,7 @@ gem 'spring',        group: :development
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'unicorn-worker-killer'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
