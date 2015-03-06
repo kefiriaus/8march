@@ -113,7 +113,7 @@ html, body {
 }
 section#first {
   //background: url("background/8-march.jpg") center center no-repeat;
-  background: url("background/flower.jpg") center center no-repeat;
+  background: asset-data-url("background/flower.jpg") center center no-repeat;
   background-size: cover;
   //color: #ffffff;
   text-align: center;
@@ -164,7 +164,7 @@ section#think, section#share, section#footer {
   }
 }
 section#love {
-  background: url("background/heart.jpg") center center no-repeat;
+  background: asset-data-url("background/heart.jpg") center center no-repeat;
   background-size: cover;
   text-align: center;
   height: 100%;
@@ -178,7 +178,7 @@ section#love {
   }
 }
 section#tender {
-  background: url("background/tender.jpg") center center no-repeat;
+  background: asset-data-url("background/tender.jpg") center center no-repeat;
   background-size: cover;
   text-align: center;
   height: 100%;
@@ -189,7 +189,7 @@ section#tender {
 
 }
 section#happy {
-  background: url("background/happy.jpg") center center no-repeat;
+  background: asset-data-url("background/happy.jpg") center center no-repeat;
   background-size: cover;
   text-align: center;
   height: 100%;
@@ -199,7 +199,7 @@ section#happy {
   }
 }
 section#travel {
-  background: url("background/travel.jpg") center center no-repeat;
+  background: asset-data-url("background/travel.jpg") center center no-repeat;
   background-size: cover;
   text-align: center;
   height: 100%;
@@ -216,7 +216,7 @@ section#travel {
   }
 }
 section#exite {
-  background: url("background/exite.jpg") center center no-repeat;
+  background: asset-data-url("background/exite.jpg") center center no-repeat;
   background-size: cover;
   text-align: center;
   height: 100%;

@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require wow
 // require fullpage
+//= require vk
 //= require_tree .

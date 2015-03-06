@@ -1,11 +1,23 @@
 doctype html
 html
   head
-    title 8th March
+    title Happy 8th March
     meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+
+    meta property="fb:app_id" content="1566854560264373"
+    meta property="og:title" content="Happy 8th March"
+    meta property="og:type" content="website"
+    meta property="og:url" content=root_url
+    meta property="og:image" content=image_url('background/flower.jpg')
+
+    link rel="image_src" href=image_url('background/flower.jpg')
+
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+
+    = javascript_include_tag '//vk.com/js/api/openapi.js?116'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+    //= javascript_include_tag "facebook.js"
     //#main
     = yield

@@ -151,11 +151,19 @@ section#share.section
         br
         .row
           .col-md-6.col-md-push-1.col-sm-6.col-xs-6.padding-0.center
-            = link_to '#' do
+            //= link_to '#', class: "share-facebook", data: { share_url: root_url, share_title: 'Happy 8 March', share_img: image_url('background/flower.jpg'), share_desc: 'Дорогие девушки! Примите мои искренние поздравления!' } do
               span.fa.fa-facebook.fa-4x.round-wrap.wow.bounceIn data-wow-duration="1.5s" data-wow-delay="1s"
-          .col-md-6.col-md-pull-1.col-sm-6.col-xs-6.padding-0.center
-            = link_to '#' do
+            .fb-like data-href=root_url data-send="true" data-width="100" data-show-faces="true" data-layout="button_count" data-action="like" data-share="false"
+          .col-md-6.col-md-push-1.col-sm-6.col-xs-6.padding-0.center
+            //= link_to '#', class: "share-vk", data: { share_url: root_url, share_title: 'Happy 8 March', share_img: image_url('background/flower.jpg'), share_desc: 'Дорогие девушки! Примите мои искренние поздравления!' } do
               span.fa.fa-vk.fa-4x.round-wrap.wow.bounceIn data-wow-duration="1s" data-wow-delay="1s"
+            #vk_like
+            = javascript_tag 'VK.Widgets.Like("vk_like", {type: "mini", height: 20})'
+        //.row
+          .col-md-6
+            span.round-wrap.wow.bounceIn data-wow-duration="1.5s" data-wow-delay="1s"
+              .fb-like data-href=root_url data-send="true" data-width="100" data-show-faces="true" data-layout="box_count" data-action="like" data-share="false"
+            //.fb-share-button data-href=root_url data-layout="icon"
 section#footer.section
   .container
     .row
